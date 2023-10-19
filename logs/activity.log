@@ -1,0 +1,321 @@
+2023-10-19 12:41:52,412 [ERROR] - You must specify either --url or --file.
+2023-10-19 12:52:55,589 [ERROR] - You must specify either --login or --sqli.
+2023-10-19 12:54:29,747 [INFO] - Starting the tool...
+2023-10-19 12:55:28,552 [INFO] - Starting the tool...
+2023-10-19 12:55:28,553 [ERROR] - An error occurred: name 'urls' is not defined
+Traceback (most recent call last):
+  File "/home/kali/FUFDG/main.py", line 45, in main
+    login_urls = executor.map(login_detection.detect_login_panels, urls, proxies, useragent)
+                                                                   ^^^^
+NameError: name 'urls' is not defined
+2023-10-19 12:58:22,839 [INFO] - Starting the tool...
+2023-10-19 12:58:22,839 [ERROR] - An error occurred: name 'useragent' is not defined
+Traceback (most recent call last):
+  File "/home/kali/FUFDG/main2.py", line 45, in main
+    login_urls = executor.map(login_detection.detect_login_panels, [url], [proxy], [useragent])
+                                                                                    ^^^^^^^^^
+NameError: name 'useragent' is not defined
+2023-10-19 13:00:58,369 [INFO] - Starting the tool...
+2023-10-19 13:00:58,374 [ERROR] - An error occurred: 'str' object has no attribute 'items'
+Traceback (most recent call last):
+  File "/home/kali/FUFDG/main2.py", line 54, in main
+    login_urls = [url for sublist in login_urls for url in sublist]
+                 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/kali/FUFDG/main2.py", line 54, in <listcomp>
+    login_urls = [url for sublist in login_urls for url in sublist]
+                 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/lib/python3.11/concurrent/futures/_base.py", line 619, in result_iterator
+    yield _result_or_cancel(fs.pop())
+          ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/lib/python3.11/concurrent/futures/_base.py", line 317, in _result_or_cancel
+    return fut.result(timeout)
+           ^^^^^^^^^^^^^^^^^^^
+  File "/usr/lib/python3.11/concurrent/futures/_base.py", line 456, in result
+    return self.__get_result()
+           ^^^^^^^^^^^^^^^^^^^
+  File "/usr/lib/python3.11/concurrent/futures/_base.py", line 401, in __get_result
+    raise self._exception
+  File "/usr/lib/python3.11/concurrent/futures/thread.py", line 58, in run
+    result = self.fn(*self.args, **self.kwargs)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/kali/FUFDG/modules/login_detection.py", line 12, in detect_login_panels
+    req = requests.get(url, headers=useragent, proxies=proxies, verify=False, timeout=8, allow_redirects=True)
+          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/lib/python3/dist-packages/requests/api.py", line 73, in get
+    return request("get", url, params=params, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/lib/python3/dist-packages/requests/api.py", line 59, in request
+    return session.request(method=method, url=url, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/lib/python3/dist-packages/requests/sessions.py", line 575, in request
+    prep = self.prepare_request(req)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/lib/python3/dist-packages/requests/sessions.py", line 486, in prepare_request
+    p.prepare(
+  File "/usr/lib/python3/dist-packages/requests/models.py", line 369, in prepare
+    self.prepare_headers(headers)
+  File "/usr/lib/python3/dist-packages/requests/models.py", line 489, in prepare_headers
+    for header in headers.items():
+                  ^^^^^^^^^^^^^
+AttributeError: 'str' object has no attribute 'items'
+2023-10-19 13:02:31,002 [INFO] - Starting the tool...
+2023-10-19 13:02:31,007 [ERROR] - An error occurred: 'str' object has no attribute 'items'
+Traceback (most recent call last):
+  File "/home/kali/FUFDG/main.py", line 54, in main
+    login_urls = [url for sublist in login_urls for url in sublist]
+                 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/kali/FUFDG/main.py", line 54, in <listcomp>
+    login_urls = [url for sublist in login_urls for url in sublist]
+                 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/lib/python3.11/concurrent/futures/_base.py", line 619, in result_iterator
+    yield _result_or_cancel(fs.pop())
+          ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/lib/python3.11/concurrent/futures/_base.py", line 317, in _result_or_cancel
+    return fut.result(timeout)
+           ^^^^^^^^^^^^^^^^^^^
+  File "/usr/lib/python3.11/concurrent/futures/_base.py", line 456, in result
+    return self.__get_result()
+           ^^^^^^^^^^^^^^^^^^^
+  File "/usr/lib/python3.11/concurrent/futures/_base.py", line 401, in __get_result
+    raise self._exception
+  File "/usr/lib/python3.11/concurrent/futures/thread.py", line 58, in run
+    result = self.fn(*self.args, **self.kwargs)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/kali/FUFDG/modules/login_detection.py", line 12, in detect_login_panels
+    req = requests.get(url, headers=useragent, proxies=proxies, verify=False, timeout=8, allow_redirects=True)
+          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/lib/python3/dist-packages/requests/api.py", line 73, in get
+    return request("get", url, params=params, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/lib/python3/dist-packages/requests/api.py", line 59, in request
+    return session.request(method=method, url=url, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/lib/python3/dist-packages/requests/sessions.py", line 575, in request
+    prep = self.prepare_request(req)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/lib/python3/dist-packages/requests/sessions.py", line 486, in prepare_request
+    p.prepare(
+  File "/usr/lib/python3/dist-packages/requests/models.py", line 369, in prepare
+    self.prepare_headers(headers)
+  File "/usr/lib/python3/dist-packages/requests/models.py", line 489, in prepare_headers
+    for header in headers.items():
+                  ^^^^^^^^^^^^^
+AttributeError: 'str' object has no attribute 'items'
+2023-10-19 13:03:47,553 [INFO] - Starting the tool...
+2023-10-19 13:03:47,558 [ERROR] - An error occurred: 'str' object has no attribute 'items'
+Traceback (most recent call last):
+  File "/home/kali/FUFDG/main.py", line 54, in main
+    login_urls = [url for sublist in login_urls for url in sublist]
+                 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/kali/FUFDG/main.py", line 54, in <listcomp>
+    login_urls = [url for sublist in login_urls for url in sublist]
+                 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/lib/python3.11/concurrent/futures/_base.py", line 619, in result_iterator
+    yield _result_or_cancel(fs.pop())
+          ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/lib/python3.11/concurrent/futures/_base.py", line 317, in _result_or_cancel
+    return fut.result(timeout)
+           ^^^^^^^^^^^^^^^^^^^
+  File "/usr/lib/python3.11/concurrent/futures/_base.py", line 456, in result
+    return self.__get_result()
+           ^^^^^^^^^^^^^^^^^^^
+  File "/usr/lib/python3.11/concurrent/futures/_base.py", line 401, in __get_result
+    raise self._exception
+  File "/usr/lib/python3.11/concurrent/futures/thread.py", line 58, in run
+    result = self.fn(*self.args, **self.kwargs)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/kali/FUFDG/modules/login_detection.py", line 12, in detect_login_panels
+    req = requests.get(url, headers=useragent, proxies=proxies, verify=False, timeout=8, allow_redirects=True)
+          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/lib/python3/dist-packages/requests/api.py", line 73, in get
+    return request("get", url, params=params, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/lib/python3/dist-packages/requests/api.py", line 59, in request
+    return session.request(method=method, url=url, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/lib/python3/dist-packages/requests/sessions.py", line 575, in request
+    prep = self.prepare_request(req)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/lib/python3/dist-packages/requests/sessions.py", line 486, in prepare_request
+    p.prepare(
+  File "/usr/lib/python3/dist-packages/requests/models.py", line 369, in prepare
+    self.prepare_headers(headers)
+  File "/usr/lib/python3/dist-packages/requests/models.py", line 489, in prepare_headers
+    for header in headers.items():
+                  ^^^^^^^^^^^^^
+AttributeError: 'str' object has no attribute 'items'
+2023-10-19 13:04:50,782 [INFO] - Starting the tool...
+2023-10-19 13:04:50,791 [ERROR] - An error occurred: name 'get_login_results' is not defined
+Traceback (most recent call last):
+  File "/home/kali/FUFDG/main.py", line 55, in main
+    get_login_results(login_urls)
+    ^^^^^^^^^^^^^^^^^
+NameError: name 'get_login_results' is not defined
+2023-10-19 13:06:16,379 [INFO] - Starting the tool...
+2023-10-19 13:07:56,183 [INFO] - Starting the tool...
+2023-10-19 13:08:27,548 [INFO] - Starting the tool...
+2023-10-19 13:22:15,980 [INFO] - Starting the tool...
+2023-10-19 13:34:09,690 [INFO] - Starting the tool...
+2023-10-19 13:35:09,132 [INFO] - Starting the tool...
+2023-10-19 13:37:23,010 [INFO] - Starting the tool...
+2023-10-19 13:37:53,251 [INFO] - Starting the tool...
+2023-10-19 13:38:22,633 [INFO] - Starting the tool...
+2023-10-19 13:40:07,261 [INFO] - Starting the tool...
+2023-10-19 13:41:09,159 [INFO] - Starting the tool...
+2023-10-19 13:41:09,163 [ERROR] - An error occurred: 'str' object has no attribute 'get'
+Traceback (most recent call last):
+  File "/home/kali/FUFDG/main.py", line 93, in main
+    login_urls = [url for sublist in login_urls for url in sublist]
+                 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/kali/FUFDG/main.py", line 93, in <listcomp>
+    login_urls = [url for sublist in login_urls for url in sublist]
+                 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/lib/python3.11/concurrent/futures/_base.py", line 619, in result_iterator
+    yield _result_or_cancel(fs.pop())
+          ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/lib/python3.11/concurrent/futures/_base.py", line 317, in _result_or_cancel
+    return fut.result(timeout)
+           ^^^^^^^^^^^^^^^^^^^
+  File "/usr/lib/python3.11/concurrent/futures/_base.py", line 456, in result
+    return self.__get_result()
+           ^^^^^^^^^^^^^^^^^^^
+  File "/usr/lib/python3.11/concurrent/futures/_base.py", line 401, in __get_result
+    raise self._exception
+  File "/usr/lib/python3.11/concurrent/futures/thread.py", line 58, in run
+    result = self.fn(*self.args, **self.kwargs)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/kali/FUFDG/modules/login_detection.py", line 12, in detect_login_panels
+    req = requests.get(url, headers=useragent, proxies=proxies, verify=False, timeout=8, allow_redirects=True)
+          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/lib/python3/dist-packages/requests/api.py", line 73, in get
+    return request("get", url, params=params, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/lib/python3/dist-packages/requests/api.py", line 59, in request
+    return session.request(method=method, url=url, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/lib/python3/dist-packages/requests/sessions.py", line 579, in request
+    settings = self.merge_environment_settings(
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/lib/python3/dist-packages/requests/sessions.py", line 760, in merge_environment_settings
+    no_proxy = proxies.get("no_proxy") if proxies is not None else None
+               ^^^^^^^^^^^
+AttributeError: 'str' object has no attribute 'get'
+2023-10-19 13:48:22,208 [INFO] - Starting the tool...
+2023-10-19 13:48:22,214 [ERROR] - An error occurred: 'str' object has no attribute 'get'
+Traceback (most recent call last):
+  File "/home/kali/FUFDG/main.py", line 130, in main
+    login_urls = [url for sublist in login_urls for url in sublist]
+                 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/kali/FUFDG/main.py", line 130, in <listcomp>
+    login_urls = [url for sublist in login_urls for url in sublist]
+                 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/lib/python3.11/concurrent/futures/_base.py", line 619, in result_iterator
+    yield _result_or_cancel(fs.pop())
+          ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/lib/python3.11/concurrent/futures/_base.py", line 317, in _result_or_cancel
+    return fut.result(timeout)
+           ^^^^^^^^^^^^^^^^^^^
+  File "/usr/lib/python3.11/concurrent/futures/_base.py", line 456, in result
+    return self.__get_result()
+           ^^^^^^^^^^^^^^^^^^^
+  File "/usr/lib/python3.11/concurrent/futures/_base.py", line 401, in __get_result
+    raise self._exception
+  File "/usr/lib/python3.11/concurrent/futures/thread.py", line 58, in run
+    result = self.fn(*self.args, **self.kwargs)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/kali/FUFDG/modules/login_detection.py", line 12, in detect_login_panels
+    req = requests.get(url, headers=useragent, proxies=proxies, verify=False, timeout=8, allow_redirects=True)
+          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/lib/python3/dist-packages/requests/api.py", line 73, in get
+    return request("get", url, params=params, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/lib/python3/dist-packages/requests/api.py", line 59, in request
+    return session.request(method=method, url=url, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/lib/python3/dist-packages/requests/sessions.py", line 579, in request
+    settings = self.merge_environment_settings(
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/lib/python3/dist-packages/requests/sessions.py", line 760, in merge_environment_settings
+    no_proxy = proxies.get("no_proxy") if proxies is not None else None
+               ^^^^^^^^^^^
+AttributeError: 'str' object has no attribute 'get'
+2023-10-19 13:48:43,064 [INFO] - Starting the tool...
+2023-10-19 13:48:43,071 [ERROR] - An error occurred: name 'sql_injection_logger' is not defined
+Traceback (most recent call last):
+  File "/usr/lib/python3/dist-packages/urllib3/connection.py", line 174, in _new_conn
+    conn = connection.create_connection(
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/lib/python3/dist-packages/urllib3/util/connection.py", line 96, in create_connection
+    raise err
+  File "/usr/lib/python3/dist-packages/urllib3/util/connection.py", line 86, in create_connection
+    sock.connect(sa)
+ConnectionRefusedError: [Errno 111] Connection refused
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/usr/lib/python3/dist-packages/urllib3/connectionpool.py", line 715, in urlopen
+    httplib_response = self._make_request(
+                       ^^^^^^^^^^^^^^^^^^^
+  File "/usr/lib/python3/dist-packages/urllib3/connectionpool.py", line 416, in _make_request
+    conn.request(method, url, **httplib_request_kw)
+  File "/usr/lib/python3/dist-packages/urllib3/connection.py", line 244, in request
+    super(HTTPConnection, self).request(method, url, body=body, headers=headers)
+  File "/usr/lib/python3.11/http/client.py", line 1286, in request
+    self._send_request(method, url, body, headers, encode_chunked)
+  File "/usr/lib/python3.11/http/client.py", line 1332, in _send_request
+    self.endheaders(body, encode_chunked=encode_chunked)
+  File "/usr/lib/python3.11/http/client.py", line 1281, in endheaders
+    self._send_output(message_body, encode_chunked=encode_chunked)
+  File "/usr/lib/python3.11/http/client.py", line 1041, in _send_output
+    self.send(msg)
+  File "/usr/lib/python3.11/http/client.py", line 979, in send
+    self.connect()
+  File "/usr/lib/python3/dist-packages/urllib3/connection.py", line 205, in connect
+    conn = self._new_conn()
+           ^^^^^^^^^^^^^^^^
+  File "/usr/lib/python3/dist-packages/urllib3/connection.py", line 186, in _new_conn
+    raise NewConnectionError(
+urllib3.exceptions.NewConnectionError: <urllib3.connection.HTTPConnection object at 0x7f7ae915ec50>: Failed to establish a new connection: [Errno 111] Connection refused
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/usr/lib/python3/dist-packages/requests/adapters.py", line 486, in send
+    resp = conn.urlopen(
+           ^^^^^^^^^^^^^
+  File "/usr/lib/python3/dist-packages/urllib3/connectionpool.py", line 799, in urlopen
+    retries = retries.increment(
+              ^^^^^^^^^^^^^^^^^^
+  File "/usr/lib/python3/dist-packages/urllib3/util/retry.py", line 592, in increment
+    raise MaxRetryError(_pool, url, error or ResponseError(cause))
+urllib3.exceptions.MaxRetryError: HTTPConnectionPool(host='127.0.0.1', port=8080): Max retries exceeded with url: http://www.wellydiecast.com/product_detail.php?id=1070?parameter=OR%201=1 (Caused by ProxyError('Cannot connect to proxy.', NewConnectionError('<urllib3.connection.HTTPConnection object at 0x7f7ae915ec50>: Failed to establish a new connection: [Errno 111] Connection refused')))
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/kali/FUFDG/main.py", line 85, in perform_sql_injection_test
+    response = session.get(request_url, proxies=proxies, verify=False)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/lib/python3/dist-packages/requests/sessions.py", line 602, in get
+    return self.request("GET", url, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/lib/python3/dist-packages/requests/sessions.py", line 589, in request
+    resp = self.send(prep, **send_kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/lib/python3/dist-packages/requests/sessions.py", line 703, in send
+    r = adapter.send(request, **kwargs)
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/lib/python3/dist-packages/requests/adapters.py", line 513, in send
+    raise ProxyError(e, request=request)
+requests.exceptions.ProxyError: HTTPConnectionPool(host='127.0.0.1', port=8080): Max retries exceeded with url: http://www.wellydiecast.com/product_detail.php?id=1070?parameter=OR%201=1 (Caused by ProxyError('Cannot connect to proxy.', NewConnectionError('<urllib3.connection.HTTPConnection object at 0x7f7ae915ec50>: Failed to establish a new connection: [Errno 111] Connection refused')))
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/kali/FUFDG/main.py", line 133, in main
+    perform_sql_injection_test(url, proxy, user_agent, category, payloads)
+  File "/home/kali/FUFDG/main.py", line 97, in perform_sql_injection_test
+    sql_injection_logger.exception(f'Error during SQL injection testing: {str(e)}')
+    ^^^^^^^^^^^^^^^^^^^^
+NameError: name 'sql_injection_logger' is not defined
