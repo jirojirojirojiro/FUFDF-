@@ -50,14 +50,9 @@ Here are some examples of how to use My Security Tool:
 - Detect login panels on a website:
 python main.py --url https://example.com --login
 
-sql
-Copy code
-
 - Perform SQL injection testing with a custom payload category:
 python main.py --url https://example.com --sqli --category custom_sql_injection
 
-csharp
-Copy code
 
 ## License
 
